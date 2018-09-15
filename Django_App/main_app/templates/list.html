@@ -1,0 +1,27 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+
+<h1>Users Details</h1>
+{% if users %}
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>No users added yet.</p>
+{% endif %}
+
+{% endblock %}

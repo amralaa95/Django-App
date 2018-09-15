@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Application</title>
+</head>
+
+<body>
+    {% block header %}
+    <div >
+        <ul >
+            <li>
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'add' %}">Add</a>
+            </li>
+            <li>
+                <a href="{% url 'list' %}">List</a>
+            </li>
+        </ul>
+    </div>
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+</body>
+
+</html>
