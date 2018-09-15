@@ -5,16 +5,18 @@
     <h1>Add user</h1>
     {{ form.non_field_errors }}
     <form method="POST">
-        {% csrf_token %} {% for field in form %}
-        <div>
-            {{ field.label_tag }} {{ field }} {% if field.errors %}
-            <ul>
-                {% for error in field.errors %}
-                <li>{{ error|escape }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </div>
+        {% csrf_token %} 
+        {% for field in form %}
+            <div>
+                {{ field.label_tag }} {{ field }} 
+                {% if field.errors %}
+                    <ul>
+                        {% for error in field.errors %}
+                            <li>{{ error|escape }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
         {% endfor %}
         <button type="submit">Add</button>
     </form>

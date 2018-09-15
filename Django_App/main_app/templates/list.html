@@ -9,6 +9,7 @@
       <tr>
         <th>Name</th>
         <th>Email</th>
+        <th>Created At</th>
       </tr>
     </thead>
     <tbody>
@@ -16,12 +17,13 @@
       <tr>
         <td>{{ user.name }}</td>
         <td>{{ user.email }}</td>
+        <td>{{ user.created_at }}</td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
 {% else %}
-  <p>No users added yet.</p>
+  <p>No Users</p>
 {% endif %}
 
 {% endblock %}
